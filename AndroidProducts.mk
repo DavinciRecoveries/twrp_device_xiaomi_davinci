@@ -16,3 +16,6 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_davinci.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_davinci-eng
