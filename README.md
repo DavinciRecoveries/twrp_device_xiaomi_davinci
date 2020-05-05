@@ -16,9 +16,6 @@ Works:
 - Backup/Restore (Needs more testing)
 - USB OTG
 - Android Q Support
-
-TO-DO:
-
 - Vibration support
 
 ## Compile
@@ -51,6 +48,7 @@ fastboot boot out/target/product/davinci/recovery.img
 ```
 
 ## Other Sources
+LineageOS kernel
 
-Precompiled stock kernel
 ## Thanks
+@mauronofrio
