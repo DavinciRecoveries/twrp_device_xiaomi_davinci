@@ -8,15 +8,18 @@ TWRP device tree for Xiaomi Redmi K20 / Mi 9T
 Works:
 
 - ADB
-- Decryption of /data
 - Screen brightness settings
 - Correct screenshot color
 - MTP
 - Flashing (opengapps, roms, images and so on)
 - Backup/Restore (Needs more testing)
 - USB OTG
-- Android Q Support
+- Android R Support
 - Vibration support
+
+To-do:
+
+- Decryption of /data (policy V2)
 
 ## Compile
 
