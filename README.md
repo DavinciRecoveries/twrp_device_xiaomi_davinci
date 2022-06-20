@@ -14,12 +14,9 @@ Works:
 - Flashing (opengapps, roms, images and so on)
 - Backup/Restore (Needs more testing)
 - USB OTG
-- Android R Support
+- Android Sv2 Support
 - Vibration support
-
-To-do:
-
-- Decryption of /data (policy V2)
+- Decryption of /data (policy V1)
 
 ## Compile
 

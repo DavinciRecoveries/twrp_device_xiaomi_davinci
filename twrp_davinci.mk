@@ -24,7 +24,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := davinci
-PRODUCT_NAME := omni_davinci
+PRODUCT_NAME := twrp_davinci
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi Mi 9T
 PRODUCT_MANUFACTURER := Xiaomi

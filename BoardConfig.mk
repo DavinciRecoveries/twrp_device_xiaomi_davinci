@@ -17,6 +17,7 @@
 ALLOW_MISSING_DEPENDENCIES := true
 SOONG_ALLOW_MISSING_DEPENDENCIES := true
 DEVICE_PATH := device/xiaomi/davinci
+TARGET_SUPPORTS_64_BIT_APPS := false
 
 # Architecture
 TARGET_ARCH := arm64
