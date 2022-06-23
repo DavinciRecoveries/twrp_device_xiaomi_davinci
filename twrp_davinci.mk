@@ -43,7 +43,6 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libandroidicu \
     libion
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so
