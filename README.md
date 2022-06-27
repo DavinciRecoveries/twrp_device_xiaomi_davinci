@@ -1,6 +1,4 @@
-# android_device_xiaomi_davinci
-For building TWRP for Xiaomi Redmi K20 / Mi 9T
-
+# twrp_device_xiaomi_davinci
 TWRP device tree for Xiaomi Redmi K20 / Mi 9T
 
 ## Features
@@ -12,42 +10,49 @@ Works:
 - Correct screenshot color
 - MTP
 - Flashing (opengapps, roms, images and so on)
-- Backup/Restore (Needs more testing)
+- Backup/Restore
 - USB OTG
-- Android R Support
+- Android Sv2 Support
 - Vibration support
-
-To-do:
-
-- Decryption of /data (policy V2)
+- Decryption of /data (policy V1)
 
 ## Compile
 
-First checkout minimal twrp with omnirom tree:
+First checkout minimal twrp with aosp tree:
 
 ```
-repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 repo sync
 ```
 
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/xiaomi/davinci" name="mauronofrio/android_device_xiaomi_davinci" remote="github" revision="android-9.0" />
+<project path="device/xiaomi/davinci" name="adi8900/twrp_device_xiaomi_davinci" remote="github" revision="twrp-12.1" />
+```
+
+Later, pick needed patches from gerrit/github
+
+```
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5405
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5670
+https://gerrit.twrp.me/c/android_bootable_recovery/+/5533
+https://github.com/HemanthJabalpuri/android_bootable_recovery/commit/6d5c365617778d107ccc6b32b55238715a06d0bc
+https://gerrit.twrp.me/c/android_system_vold/+/5540
 ```
 
 Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch omni_davinci-eng
-mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
+lunch twrp_davinci-eng
+mka recoveryimage
 ```
 
-To test it:
+To flash it:
 
 ```
-fastboot boot out/target/product/davinci/recovery.img
+fastboot flash recovery out/target/product/davinci/recovery.img
 ```
 
 ## Other Sources
@@ -55,3 +60,5 @@ LineageOS kernel
 
 ## Thanks
 @mauronofrio
+
+@pipipig233666
