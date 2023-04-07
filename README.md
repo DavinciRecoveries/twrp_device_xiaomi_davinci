@@ -12,7 +12,7 @@ Works:
 - Flashing (opengapps, roms, images and so on)
 - Backup/Restore
 - USB OTG
-- Android Sv2 Support
+- Android T Support
 - Vibration support
 - Decryption of /data (policy V1)
 
