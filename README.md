@@ -31,12 +31,6 @@ Then add these projects to .repo/manifest.xml:
 <project path="device/xiaomi/davinci" name="adi8900/twrp_device_xiaomi_davinci" remote="github" revision="twrp-12.1" />
 ```
 
-Later, pick this patch from github
-
-```
-https://github.com/HemanthJabalpuri/android_bootable_recovery/commit/6d5c365617778d107ccc6b32b55238715a06d0bc
-```
-
 Finally execute these:
 
 ```
