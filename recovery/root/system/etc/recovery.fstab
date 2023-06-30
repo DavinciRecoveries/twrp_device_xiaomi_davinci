@@ -35,8 +35,8 @@
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
 /dev/block/bootdevice/by-name/system                    /                        ext4    ro,barrier=1,discard                                 wait,avb
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1                       wait
-/dev/block/bootdevice/by-name/metadata                  /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,check,wrappedkey
-/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,fsync_mode=nobarrier,reserve_root=32768,resgid=1065,inlinecrypt        wait,check,fileencryption=ice,wrappedkey,quota,reservedsize=128M,latemount
+/dev/block/bootdevice/by-name/metadata                  /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,check
+/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,fsync_mode=nobarrier,reserve_root=32768,resgid=1065,inlinecrypt        wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,metadata_encryption=aes-256-xts:wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,latemount
 /dev/block/bootdevice/by-name/cust                      /system_ext              ext4    ro,noatime,nodev,barrier=1                           wait,recoveryonly
 # Need to have this entry in here even though the mount point itself is no longer needed.
 # The update_engine code looks for this entry in order to determine the boot device address
